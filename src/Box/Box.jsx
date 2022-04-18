@@ -6,8 +6,8 @@ const Box = (props) => {
   let color = props.color;
 
   return (
-    <div>
-      <div
+    <div className="p-4">
+      <div className="border border-gray-800 pb-3"
         style={{
           backgroundColor: `${color}`,
           width: `${width}px`,
@@ -16,7 +16,7 @@ const Box = (props) => {
       >
         {" "}
       </div>
-      <div>
+      <div >
         Width:{width} Height: {height} Color: {color}
       </div>
     </div>
