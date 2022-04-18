@@ -1,9 +1,14 @@
-import React from 'react'
+import React from "react";
+import Box from "../Box/Box";
 
 const Main = () => {
   return (
-    <div>Main</div>
-  )
-}
+    <div>
+      <div>
+          
+      </div>
+    </div>
+  );
+};
 
-export default Main
+export default Main;
