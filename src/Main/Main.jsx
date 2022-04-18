@@ -3,14 +3,26 @@ import Box from "../Box/Box";
 
 const Main = () => {
     const [width, setWidth] = useState("");
+    const [color, setColor] = useState("");
     const [height, setHeight] = useState("");
     const [boxArray, setBoxArray] = useState([]);
 
     const handleSubmit = (e) => {
         e.preventDefault();
-      
+        if (width !== `` && height !== ``) {
+            let currentBox = { width: width, height: height, color: color};
+            setBoxArray([...boxArray, currentBox]);
+            setWidth({ value: "" });
+            setHeight({ value: "" });
+            setColor({ value: "" });
+          } else {
+            alert("Type in width and height please!");
+          }
       };
     
+      const handleChangeColor = (e) => {
+        setColor({ value: e.target.value });
+      };
 
     const handleChangeWidth = (e) => {
         setWidth({ value: e.target.value });
@@ -20,7 +32,8 @@ const Main = () => {
         setHeight({ value: e.target.value });
       };
   return (
-  <div className="border border-gray-800 m-6 p-8  bg-[#6982d5] text-white rounded-xl shadow-2xl shadow-slate-500">
+  <div >
+      <div className="border border-gray-800 m-6 p-8  bg-[#6982d5] text-white rounded-xl shadow-2xl shadow-slate-500">
       <form className="mb-6 " onSubmit={(e) => handleSubmit(e)}>
         <div className="pb-4 ">
           <label className="mr-9 ">
@@ -46,6 +59,18 @@ const Main = () => {
             />
           </label>
         </div>
+        <div className="pb-4 ">
+          <label className=" ">
+          Color:
+            <input
+              type="text"
+              name="height"
+              value={color.value}
+              onChange={(e) => handleChangeColor(e)}
+              className="ml-1 border border-gray-800 bg-[#e5f8ea] text-black rounded-md "
+            />
+          </label>
+        </div>
         <div className="flex justify-center items-center ">
           <input
             type="submit"
@@ -54,15 +79,18 @@ const Main = () => {
           />
         </div>
       </form>
+      </div>
+      
       <div>
         {boxArray[0]
           ? boxArray.map((box) => {
               return (
-                <div key={'hey'}>
+                <div key={'hey'} className='flex justify-center items-center'> 
                   <Box
                     // use new library for uuid for each key!
                     height={box.height.value}
                     width={box.width.value}
+                    color={box.color.value}
                   />
                 </div>
               );

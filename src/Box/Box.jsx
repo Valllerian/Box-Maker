@@ -1,8 +1,11 @@
 import React from 'react'
 
-const Box = () => {
+const Box = (props) => {
+    let width = props.width
+    let height = props.height
+    let color = props.color
   return (
-    <div>Box</div>
+    <div> Width:{width} Height: {height} Color: {color}</div>
   )
 }
 
