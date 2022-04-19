@@ -16,8 +16,10 @@ const Box = (props) => {
       >
         {" "}
       </div>
-      <div >
-        Width:{width} Height: {height} Color: {color}
+      <div className="block">
+          <p>Width: {width}px;</p>
+          <p>Height: {height}px;</p>
+          <p>Color: {color};</p>
       </div>
     </div>
   );

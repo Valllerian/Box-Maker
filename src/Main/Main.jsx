@@ -41,7 +41,7 @@ const Main = () => {
 
   return (
     <div>
-      <div className="border border-gray-800 m-6 p-8  bg-[#6982d5] text-white rounded-xl shadow-2xl shadow-slate-500">
+      <div className="border border-gray-800 m-6 p-8  bg-[#fbdcb0] text-black rounded-xl shadow-2xl shadow-slate-500">
         <form className="mb-6 " onSubmit={(e) => handleSubmit(e)}>
           <div className="pb-4 ">
             <label className="mr-9 ">
@@ -83,7 +83,7 @@ const Main = () => {
             <input
               type="submit"
               value="Submit"
-              className="p-3 bg-violet-500 hover:bg-violet-600 active:bg-violet-700 rounded-md  border border-gray-800 shadow-2xl shadow-slate-600"
+              className="p-3 bg-[#dac97d] hover:bg-[#db9e3d] active:bg-[#db9e3d] rounded-md  border border-gray-800 shadow-2xl shadow-slate-600"
             />
           </div>
         </form>
