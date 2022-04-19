@@ -93,14 +93,14 @@ const Main = () => {
         {boxArray[0]
           ? boxArray.map((box) => {
               return (
-                <div key={"hey"} className="flex justify-center items-center border border-gray-800">
+                <div key={"hey"} className="flex justify-center items-center border border-gray-800 bg-[#FFFFFF]">
                   <Box
                     // use new library for uuid for each key!
                     height={box.height.value}
                     width={box.width.value}
                     color={box.color.value}
                   />
-                  <button className="ml-6 mt-2 p-1 bg-[#9c0726] border border-gray-800" onClick={(e)=>deleteButton(e, box.height.value, box.width.value, box.color.value)}>X</button>
+                  <button className="ml-6 mr-2 p-3 bg-[#9c0726] border border-gray-800" onClick={(e)=>deleteButton(e, box.height.value, box.width.value, box.color.value)}>X</button>
                 </div>
               );
             })
