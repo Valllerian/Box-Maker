@@ -6,8 +6,9 @@ const Box = (props) => {
   let color = props.color;
 
   return (
-    <div className="p-4 flex justify-center items-center" >
-      <div className="border border-gray-800 mr-3  "
+    <div className="p-4 flex justify-center items-center">
+      <div
+        className="border border-gray-800 mr-3  "
         style={{
           backgroundColor: `${color}`,
           width: `${width}px`,
@@ -17,9 +18,9 @@ const Box = (props) => {
         {" "}
       </div>
       <div className="block">
-          <p>Width: {width}px;</p>
-          <p>Height: {height}px;</p>
-          <p>Color: {color};</p>
+        <p>Width: {width}px;</p>
+        <p>Height: {height}px;</p>
+        <p>Color: {color};</p>
       </div>
     </div>
   );
